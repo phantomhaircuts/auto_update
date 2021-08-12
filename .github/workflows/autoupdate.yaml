@@ -1,7 +1,12 @@
 name: autoupdate
 on:
   # This will trigger on all pushes to all branches.
-  push: {}
+  push: {
+    pull_request:
+    branches:
+      - main
+  }
+  
   # Alternatively, you can only trigger if commits are pushed to certain branches, e.g.:
   # push:
   #   branches:
